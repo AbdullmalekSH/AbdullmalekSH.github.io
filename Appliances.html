@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appliances</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body onload="generateCaptcha()">
+  <div id="nav">
+    <nav>
+      <div class="links">
+        <h2>الأجهزة</h2>
+        <a class="nav_link" href="Home.html">الرئيسية</a>
+        <a class="nav_link" href="About_us.html">من نحن</a>
+      </div>
+      <div class="cart">
+        <span class="material-symbols-outlined">
+          shopping_cart
+        </span>
+        <div class="cartCount" id="cartCount">0</div>
+      </div>
+    </nav>
+  </div>
+  <main>
+    <div class="products" id="products">
+    </div>
+    <div id="cart">
+      <div id="label">
+        <h2>سلة المشتريات</h2>
+      </div>
+      <div id="shoppingCart">
+        <table class="cartList" id="cartList">
+        </table>
+        <button class="cartButtons" id="clearCart" onclick="clearCart()">إلغاء</button>
+        <button class="cartButtons" onclick="showForm()" id="checkout">متابعة</button>
+      </div>
+    </div>
+    <div id="userForm">
+      <span style="cursor: pointer;" onclick="closeForm()" class="material-symbols-outlined">
+        close
+      </span>
+      <form>
+        <label for="name">الأسم:</label>
+        <input type="text" id="name" name="name" onchange="validateName()" class="form_input" required>
+
+        <label for="number">رقم الهاتف: <span id="net"></span></label>
+        <input type="tel" id="number" name="number" onchange="validateNumber()" class="form_input" pattern="[0-9]{10}" required>
+
+        <label for="email">البريد الألكتروني:</label>
+        <input type="email" id="email" name="email" onchange="validateEmail()" class="form_input" required>
+
+        <label for="cardId">الرقم الوطني: <span id="city_num"></span></label>
+        <input type="number" id="cardId" name="cardId" onchange="validateId()" class="form_input" pattern="[0-9]{11}" required>
+
+        <label for="birthdate">تاريخ الميلاد: <span id="city_num"></span></label>
+        <input type="date" id="birthdate" name="birthdate" onchange="validateBirthdate()" class="form_input" required>
+        <div id="capSection">
+          <input type="text" id="mainCaptcha" readonly="readonly">
+          <input type="button" id="refresh" value="تحديث" onclick="generateCaptcha()">
+
+          <input type="text" id="txtInput" required>
+          <input id="Button1" type="button" value="تحقق" onclick="CheckValidCaptcha()">
+
+          <span id="error" style="color:red"></span>
+          <span id="success" style="color:green"></span>
+        </div>
+        <input type="submit" onclick="finish_form()" value="شراء">
+      </form>
+    </div>
+  </main>
+  <script src="assets/index.js"></script>
+</body>
+</html>

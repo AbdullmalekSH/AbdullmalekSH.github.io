@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #8787A3;
+}
+
+h1, h2, h3, p, ul, li{
+    color: white;
+}
+
+.nav_link {
+    display: inline;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #222831;
+    color: white;
+    padding: 10px 60px 8px;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+#nav {
+    top: 0;
+    position:sticky;
+    z-index: 1;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 30px;
+}
+
+.cart {
+    position: relative;
+    background-color: white;
+    color: #213555;
+    padding: 5px 5px 0px;
+    font-size: 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.cartCount {
+    font-size: 16px;
+    background-color: #D65A31;
+    color: white;
+    position: absolute;
+    left: -6px;
+    top: -8px;
+    border-radius: 2px;
+    padding: 0px 2px;
+}
+
+.products {
+    margin: 15px;
+    display: grid;
+    grid-template-columns: repeat(4, 250px);
+    gap: 15px;
+    justify-content: center;
+}
+
+@media (max-width: 1000px) {
+    .products {
+        grid-template-columns: repeat(2, 250px);
+    }
+}
+
+@media (max-width: 500px) {
+    .products {
+        grid-template-columns: repeat(1, 250px);
+    }
+}
+
+.item {
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #393E46;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+
+.itemImg {
+    width: 100%;
+    /* border-radius: 50px; */
+    object-fit: cover;
+    border-radius: 30px 30px 0 0;
+}
+
+.item:hover {
+    transform: scale(1.05, 1.05);
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+}
+
+.priceAndQuantity {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    font-size: 20px;
+}
+
+.remove {
+    color: lightcoral;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.add {
+    color: lightgreen;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.quantity {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#cart {
+    width: 35%;
+    background-color: #393E46;
+    color: white;
+    padding-top: 20px;
+    text-align: center;
+}
+
+table, th, tr, td {
+    width: 90%;
+    border: 2px solid white;
+    border-collapse: collapse;
+    padding: 5px 10px;
+    margin: auto;
+}
+
+button, input[type = submit] {
+    font-size: 20px;
+    background-color: #222831;
+    padding: 2px 25px;
+    color: white;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.cartButtons {
+    display: none;
+}
+
+#shoppingCart {
+    margin: auto;
+}
+
+#label {
+    margin-bottom: 10px;
+}
+
+#clearCart {
+    background-color: lightcoral;
+    text-decoration: none;
+}
+
+.form_input {
+    padding: 12px 20px;
+    display: flex;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 10px auto;
+}
+
+#userForm {
+    z-index: 2;
+    padding: 10px;
+    border-radius: 15px;
+    display: none;
+    position: fixed;
+    margin: 0px 20px;
+    background-color: #393E46;
+    color: white;
+    width: 90%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#capSection {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: 10px auto;
+    gap: 3px;
+}
