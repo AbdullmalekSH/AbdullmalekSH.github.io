@@ -1,53 +1,147 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الصفحة الرئيسية</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="assets/style.css">
+    <title>AbdullmalekSH</title>
+    <link rel="stylesheet" href="resources/style.css">
 </head>
 <body>
-    <div id="nav">
-        <nav>
-            <div class="links">
-                <h2>الرئيسية</h2>
-                <a class="nav_link" href="Appliances.html">الأجهزة</a>
-                <a class="nav_link" href="About_us.html">من نحن</a>
+    <div id="sectionOne" class="section">
+        <div id="draw">
+            <canvas id="matrix"></canvas>    
+        </div>
+        <div class="name">
+            <h1>Abdullmalek Sheikh Soubh</h1>
+            <p>
+                Data Analyst &<br>
+                A Web Developer
+            </p>
+        </div>
+        <div class="g-buttons">
+            <div class="group">
+                <a href="#sectionTwo">About</a>
+                <a href="#sectionThree">Skills</a>
+                <a href="#sectionFive">Contact</a>
+                <a href="resources/MyCV.pdf" download="AbdullmalekCV">Download My Resume</a>
             </div>
-        </nav>
+        </div>
     </div>
-    <div id="main">
-        <h2>اسماء مجموعة الطلاب</h2>
-        <table>
-            <tr>
-                <th><p> اسم الطالب </p></th>
-                <th><p> رقم الطالب </p></th>
-                <th><p> الصف </p></th>
-            </tr>
-            <tr>
-                <td><p>عبد الملك خالد شيخ صبح</p></td>
-                <td><p>Abdullmalek_147804</p></td>
-                <td><p>C6</p></td>
-            </tr>
-            <tr>
-                <td><p>مادلين مصلح عيزوقي</p></td>
-                <td><p>madlen_146788</p></td>
-                <td><p>C6</p></td>
-            </tr>
-            <tr>
-                <td><p>علي عبد الجبار طه</p></td>
-                <td><p>ali_248241</p></td>
-                <td><p>C7</p></td>
-            </tr>
-            <tr>
-                <td><p>صبحي سعيد كرزون</p></td>
-                <td><p>subhi_249535</p></td>
-                <td><p>C7</p></td>
-            </tr>
-        </table>
-        <p>رابط النشر على الأنترنت <a href="">إضغط هنا</a></p>
+    <div id="sectionTwo" class="section">
+        <h1>About Me</h1>
+        <div class="container">
+            <div class="card card-dark hide">
+                <h3>
+                    Objective
+                </h3>
+                <p>
+                    I'm an enthusiastic individual with a deep interest in the tech industry.
+
+                    I bring an unwavering commitment to learning, adaptability, and a strong problem-solving mindset. My aim is to grow and develop my skills in this dynamic field.
+
+                    I'm tech-savvy and an excellent communicator, and I believe in the power of teamwork to drive innovation. I'm excited to explore and contribute to exciting projects.
+
+                    If you're looking to connect, share knowledge, or discuss opportunities I'd love to hear from you. Let's connect and chat!
+                </p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card card-dark hide">
+                <h3>
+                    General
+                </h3>
+                <p>
+                    Birth Date: 17/6/2000 <br>
+                    Military Service: Postponed
+                </p>
+            </div>
+            <div class="card card-dark hide">
+                <h3>
+                    Education
+                </h3>
+                <p>
+                    Bachelor in Information Technology (BAIT), Syrian Virtual University 
+                    [2020-2026]
+                </p>
+            </div>
+        </div>
     </div>
-    <script src="assets/index.js"></script>
+    <div id="sectionThree" class="section">
+        <h1 class="hide">Skills</h1>
+        <div id="dataAnalysis" class="hide">
+            <h3>
+                Data Analysis
+            </h3>
+            <div class="skillSec">
+                <div class="skill">
+                    <img src="resources/powerbi.svg.png" alt="">
+                    <p>
+                        Power BI
+                    </p>
+                </div>
+                <div class="skill">
+                    <img src="resources/sql.png" alt="">
+                    <p>SQL</p>
+                </div>
+                <div class="skill">
+                    <img src="resources/Python.png" alt="">
+                    <p>
+                        Python<br>
+                        (Pandas, Metplotlib, NumPy)
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="webDev" class="hide">
+            <h3>
+                Web Development
+            </h3>
+            <div class="skillSec">
+                <div class="skill">
+                    <img src="resources/front.png" alt="">
+                    <p>
+                        HTML<br>
+                        CSS <br>
+                        JS
+                    </p>
+                </div>
+                <div class="skill">
+                    <img src="resources/Laravel.png" alt="">
+                    <p>
+                        Php Laravel
+                    </p>
+                </div>
+                <div class="skill">
+                    <img src="resources/Angular.png" alt="">
+                    <p>Angular</p>
+                </div>
+                <div class="skill">
+                    <img src="resources/mysql.png" alt="">
+                    <p>MySQL</p>
+                </div>
+                <div class="skill">
+                    <img src="resources/flask.png" alt="">
+                    <p>
+                        Python<br>
+                        (Flask)
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sectionFive" class="section">
+        <h1>Contact Me</h1>
+        <div class="split">
+            <div class="act">
+                <p>Lets make something special together!</p>
+            </div>
+            <div class="act">
+                <a href="https://www.linkedin.com/in/abdullmalek-sheikh-soubh-261987112/">Linkedin</a>
+                <a>Email: Abdullmalek1762000@gmail.com</a>
+                <a>Mobile: +963 951-498-375</a>
+            </div>
+        </div>
+    </div>
+    <script src="resources/script.js"></script>
 </body>
 </html>

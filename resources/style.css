@@ -1,0 +1,260 @@
+@font-face {
+    font-family: Montserrat;
+    src:url(fonts/Montserrat.ttf);
+}
+
+@font-face {
+    font-family: KodeMono;
+    src:url(fonts/KodeMono.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+}
+
+h1 {
+    font-family: 'KodeMono';
+}
+
+h3, a, p {
+    font-family: 'Montserrat';
+}
+
+h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+canvas {
+    position: absolute;
+    z-index: -1;
+}
+
+i {
+    font-size: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+p {
+    font-size: 24px;
+    line-height: 35px;
+}
+
+a:hover {
+    color: white;
+    text-shadow: 0 0 5px #0F0;
+}
+
+.name, .g-buttons {
+    display: flex;
+    font-size: 24px;
+    text-align: center;
+    justify-content: center;
+}
+
+.name {
+    font-size: 35px;
+    flex-direction: column;
+    color: white;
+    /* text-shadow: 0 0 5px #0F0; */
+    padding-top: 200px;
+}
+
+.group {
+    display: flex;
+    border-radius: 12px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: black;
+    /* box-shadow: 0 0 1px #0F0; */
+    border:solid 1px white;
+    gap: 20px;
+}
+
+.g-buttons {
+    margin-top: 5%;
+    padding-bottom: 20px;
+}
+
+.card {
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    border-radius: 30px;
+    padding: 20px 20px;
+    box-shadow: 3px 4px 8px 0 rgba(255, 255, 255, 0.1), 3px 6px 20px 0 rgba(255, 255, 255, 0.15);
+    
+}
+
+.card-dark {
+    background-color: black;
+    border: 1px solid white;
+}
+
+.card-light {
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+}
+
+.card img {
+    width: 90px;
+    display: inline;
+}
+
+.section {
+    height: fit-content;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.hide {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(50%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+.skill img {
+       width: 80px;
+}
+
+.skill {
+    text-align: center;
+    width: 210px;
+}
+
+.skillSec {
+    display: flex;
+    flex-direction: row;
+    align-items:safe;
+    justify-content: center;
+    gap: 20px;
+}
+
+.act {
+    display: flex;
+    flex-direction: column;
+}
+
+.split {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    align-items: center;
+}
+
+#sectionOne {
+    height: 800px;
+}
+
+#sectionTwo {
+    padding: 35px 50px;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+#sectionTwo h1 {
+    font-size: 50px;
+}
+
+#sectionThree {
+    background-color: white;
+    position: relative;
+}
+
+#sectionThree h1 {
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 250px;
+    left: -100px;
+    font-size: 100px;
+}
+
+#sectionFive {
+    padding-top: 50px;
+    padding-bottom: 80px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+#sectionFive h1, #sectionFive p {
+    color: white;
+}
+
+#sectionFive a {
+    margin: 3px;
+}
+
+#photo {
+    width: 300px;
+    border-radius: 100%;
+}
+
+#dataAnalysis, #webDev {
+    text-align: center;
+}
+
+#dataAnalysis h3, #webDev h3 {
+    font-size: 35px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+@media (max-width: 700px) {
+    .group {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .skillSec {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        flex-direction: column;
+    }
+
+    #dataAnalysis{
+        padding-top: 140px;
+    }
+    
+    #sectionThree h1 {
+        top: 20px;
+        left: 20px;
+        transform: rotate(0);
+    }
+}
